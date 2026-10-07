@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --bg-main: #06110c;
+  --bg-soft: #0c1a14;
+  --panel: rgba(10, 24, 18, 0.72);
+  --panel-strong: rgba(8, 19, 14, 0.9);
+  --line: rgba(134, 239, 172, 0.16);
+  --text-main: #ecfdf3;
+  --text-soft: #a7c1b1;
+  --accent: #4ade80;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(74, 222, 128, 0.14), transparent 30%),
+    radial-gradient(circle at top right, rgba(45, 212, 191, 0.1), transparent 24%),
+    linear-gradient(180deg, #08130e 0%, #06110c 55%, #08130f 100%);
+  color: var(--text-main);
+  font-family:
+    "Segoe UI",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(74, 222, 128, 0.35);
+  color: #f7fff9;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1.2s ease-out forwards;
+}
